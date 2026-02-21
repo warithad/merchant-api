@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name="events")
 public class Event {
 
     @Id
-    private String eventId;
+    private UUID eventId;
     private String merchantId;
     private LocalDateTime timeStamp;
 
@@ -21,6 +22,8 @@ public class Event {
     private StatusType status;
     private String eventType;
     private BigDecimal amount;
+
+    @Enumerated(EnumType.STRING)
     private ChannelType channel;
     private String region;
 
@@ -28,11 +31,11 @@ public class Event {
     private MerchantTierType merchantTier;
 
 
-    public String getEventId() {
+    public UUID getEventId() {
         return eventId;
     }
 
-    public void setEventId(String eventId) {
+    public void setEventId(UUID eventId) {
         this.eventId = eventId;
     }
 
