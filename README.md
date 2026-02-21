@@ -39,4 +39,3 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.properties.hibernate.format_sql=true
 
 ddl-auto-create-drop will drop the database schema when the app stops
-
